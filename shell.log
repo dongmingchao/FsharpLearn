@@ -1,0 +1,14 @@
+2020-07-11 10:22:25 - Microsoft (R) F# Interactive version 10.1.0 for F# 4.1
+2020-07-11 10:22:25 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-11 10:22:25 - For help type #help;;
+2020-07-11 10:22:25 - > val it :
+2020-07-11 10:22:25 -   ResizeArray<System.Type *
+2020-07-11 10:22:25 -               (obj ->
+2020-07-11 10:22:25 -                  seq<string *
+2020-07-11 10:22:25 -                      string> *
+2020-07-11 10:22:25 -                  string)>
+2020-07-11 10:22:25 - = seq []
+2020-07-11 10:22:25 - --> Added '/home/nbuser/IfSharp/bin' to library include path
+2020-07-11 10:22:25 - --> Referenced '/home/nbuser/IfSharp/bin/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-11 10:22:25 - --> Referenced '/home/nbuser/IfSharp/bin/NetMQ.dll' (file may be locked by F# Interactive process)
+2020-07-11 10:25:44 - shutdown request
