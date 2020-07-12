@@ -12,3 +12,448 @@
 2020-07-11 10:22:25 - --> Referenced '/home/nbuser/IfSharp/bin/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
 2020-07-11 10:22:25 - --> Referenced '/home/nbuser/IfSharp/bin/NetMQ.dll' (file may be locked by F# Interactive process)
 2020-07-11 10:25:44 - shutdown request
+2020-07-12 15:33:00 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 15:33:00 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 15:33:00 - For help type #help;;
+2020-07-12 15:33:00 - > val it :
+2020-07-12 15:33:00 -   ResizeArray<System.Type *
+2020-07-12 15:33:00 -               (obj ->
+2020-07-12 15:33:00 -                  seq<string *
+2020-07-12 15:33:00 -                      string> *
+2020-07-12 15:33:00 -                  string)>
+2020-07-12 15:33:00 - = seq []
+2020-07-12 15:33:00 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 15:33:00 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 15:33:00 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 15:33:05 - let rnd = System.Random()
+2020-07-12 15:33:05 - let rec randomWalk x =
+2020-07-12 15:33:05 -     seq { yield x
+2020-07-12 15:33:05 -           yield! randomWalk (x + rnd.NextDouble() - 0.5) }
+2020-07-12 15:33:05 - let firstValuesOfRandomWalk = 
+2020-07-12 15:33:05 -     randomWalk 5.0 
+2020-07-12 15:33:05 -     |> Seq.truncate 20
+2020-07-12 15:33:05 -     |> Seq.toList
+2020-07-12 15:33:05 -     
+2020-07-12 15:33:05 - firstValuesOfRandomWalk
+2020-07-12 15:33:28 - type MyType = { FirstName: string; LastName: string }
+2020-07-12 15:33:28 - let records = 
+2020-07-12 15:33:28 -     [|
+2020-07-12 15:33:28 -         { FirstName = "Walter"; LastName = "Harp" }
+2020-07-12 15:33:28 -         { FirstName = "Jeff"; LastName = "Smith" }
+2020-07-12 15:33:28 -         { FirstName = "Ben"; LastName = "Smith" }
+2020-07-12 15:33:28 -         { FirstName = ""; LastName = "Holly" }
+2020-07-12 15:33:28 -     |]
+2020-07-12 15:33:28 - records |> Util.Table
+2020-07-12 15:33:40 - "f(x)" |> Util.Math
+2020-07-12 15:34:34 - shutdown request
+2020-07-12 15:34:39 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 15:34:39 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 15:34:39 - For help type #help;;
+2020-07-12 15:34:39 - > val it :
+2020-07-12 15:34:39 -   ResizeArray<System.Type *
+2020-07-12 15:34:39 -               (obj ->
+2020-07-12 15:34:39 -                  seq<string *
+2020-07-12 15:34:39 -                      string> *
+2020-07-12 15:34:39 -                  string)>
+2020-07-12 15:34:39 - = seq []
+2020-07-12 15:34:39 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 15:34:39 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 15:34:39 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 15:34:39 - (12/4 + 5 + 7) * 4 - 18
+2020-07-12 15:34:40 - let sampleNumbers = [ 0 .. 15 ]
+2020-07-12 15:34:40 - sampleNumbers
+2020-07-12 15:34:40 - /// A function to compute a sample curve
+2020-07-12 15:34:40 - let sampleFunction (x:int) = 
+2020-07-12 15:34:40 -     2*x*x - 5*x + 3
+2020-07-12 15:34:40 - sampleFunction 7
+2020-07-12 15:34:40 - sampleFunction (7 + 4)
+2020-07-12 15:34:40 - sampleFunction (int 3.14 + int 2.79)
+2020-07-12 15:34:40 - if 98.0 < 100.0 then 10 else 20
+2020-07-12 15:34:40 - not false && (true || false)
+2020-07-12 15:34:40 - let helloWorld = "Hello" + " " + "world"
+2020-07-12 15:34:40 - helloWorld
+2020-07-12 15:34:40 - let tripleQuoteString = """A triple-quoted string can contain double quotes " anywhere within it."""
+2020-07-12 15:34:40 - tripleQuoteString
+2020-07-12 15:34:40 - (1, "fred", 3.1415)
+2020-07-12 15:34:40 - open System
+2020-07-12 15:34:40 - let fridaysList = 
+2020-07-12 15:34:40 -     [ for month in 1 .. 6 do
+2020-07-12 15:34:40 -         for day in 1 .. DateTime.DaysInMonth(2017, month) do 
+2020-07-12 15:34:40 -           let date = DateTime(2017, month, day)
+2020-07-12 15:34:40 -           if date.DayOfWeek = DayOfWeek.Friday then 
+2020-07-12 15:34:40 -             yield date.ToShortDateString() ]
+2020-07-12 15:34:40 -               
+2020-07-12 15:34:40 - fridaysList              
+2020-07-12 15:34:40 - let lowNumbers = [| 1 .. 200 |]
+2020-07-12 15:34:40 - lowNumbers
+2020-07-12 15:34:40 - sampleNumbers 
+2020-07-12 15:34:40 - |> List.map (fun x -> x*x) 
+2020-07-12 15:34:40 - let sumOfSelectedSquares = 
+2020-07-12 15:34:40 -     sampleNumbers
+2020-07-12 15:34:40 -     |> List.map (fun x -> x*x) 
+2020-07-12 15:34:40 -     |> List.filter (fun x -> x % 3 = 0)
+2020-07-12 15:34:40 -     |> List.sumBy (fun x -> x * x)
+2020-07-12 15:34:40 -     
+2020-07-12 15:34:40 - sumOfSelectedSquares    
+2020-07-12 15:34:40 - lowNumbers.[0 .. 50]
+2020-07-12 15:34:41 - let rnd = System.Random()
+2020-07-12 15:34:41 - let rec randomWalk x =
+2020-07-12 15:34:41 -     seq { yield x
+2020-07-12 15:34:41 -           yield! randomWalk (x + rnd.NextDouble() - 0.5) }
+2020-07-12 15:34:41 - let firstValuesOfRandomWalk = 
+2020-07-12 15:34:41 -     randomWalk 5.0 
+2020-07-12 15:34:41 -     |> Seq.truncate 20
+2020-07-12 15:34:41 -     |> Seq.toList
+2020-07-12 15:34:41 -     
+2020-07-12 15:34:41 - firstValuesOfRandomWalk
+2020-07-12 15:34:41 - type ContactCard = 
+2020-07-12 15:34:41 -     { Name     : string
+2020-07-12 15:34:41 -       Phone    : string
+2020-07-12 15:34:41 -       Verified : bool
+2020-07-12 15:34:41 -       ZipCode : string option}            
+2020-07-12 15:34:41 -       
+2020-07-12 15:34:41 - let sampleCard = { Name = "Alf" ; Phone = "(206) 555-0157" ; Verified = false; ZipCode=Some "90210" }
+2020-07-12 15:34:41 - sampleCard
+2020-07-12 15:34:41 - let showCard (c: ContactCard) = 
+2020-07-12 15:34:41 -     c.Name + " Phone: " + c.Phone + (if not c.Verified then " (unverified)" else "")
+2020-07-12 15:34:41 -     
+2020-07-12 15:34:41 - showCard sampleCard
+2020-07-12 15:34:41 - open Microsoft.FSharp.Data.UnitSystems.SI.UnitNames
+2020-07-12 15:34:41 - let raceLength = 1600.0<meter>
+2020-07-12 15:34:41 - [<Measure>]
+2020-07-12 15:34:41 - type mile =
+2020-07-12 15:34:41 -     /// Conversion factor mile to meter: meter is defined in SI.UnitNames
+2020-07-12 15:34:41 -     static member asMeter = 1609.344<meter/mile>
+2020-07-12 15:34:41 - /// Distance expressed using imperial units
+2020-07-12 15:34:41 - let distanceToWalk  = 500.0<mile>          
+2020-07-12 15:34:41 - // Same distanceusing metric system
+2020-07-12 15:34:41 - let distanceToWalkInMeters = distanceToWalk * mile.asMeter   
+2020-07-12 15:34:41 - (raceLength, distanceToWalk, distanceToWalkInMeters)
+2020-07-12 15:34:41 - let oneBigArray = [| 0 .. 100000 |]
+2020-07-12 15:34:41 - // Do some CPU intensive computation
+2020-07-12 15:34:41 - let rec computeSomeFunction x = 
+2020-07-12 15:34:41 -     if x <= 2 then 1 
+2020-07-12 15:34:41 -     else computeSomeFunction (x - 1) + computeSomeFunction (x - 2)
+2020-07-12 15:34:41 -        
+2020-07-12 15:34:41 - /// Do a parallel map over a large input array
+2020-07-12 15:34:41 - let computeResults() = oneBigArray |> Array.Parallel.map (fun x -> computeSomeFunction (x % 24))
+2020-07-12 15:34:41 - computeResults()
+2020-07-12 15:34:42 - #load "Paket.fsx"
+2020-07-12 15:34:43 - Paket.Package
+2020-07-12 15:34:43 -   [ "MathNet.Numerics"
+2020-07-12 15:34:43 -     "MathNet.Numerics.FSharp"
+2020-07-12 15:34:43 -   ]
+2020-07-12 15:34:52 - #load "Paket.Generated.Refs.fsx"
+2020-07-12 15:34:53 - open MathNet.Numerics.LinearAlgebra
+2020-07-12 15:34:53 - let m = matrix [[ 1.0; 2.0 ]
+2020-07-12 15:34:53 -                 [ 3.0; 4.0 ]]
+2020-07-12 15:34:53 - m.Inverse() 
+2020-07-12 15:34:53 - type MyType = { FirstName: string; LastName: string }
+2020-07-12 15:34:53 - let records = 
+2020-07-12 15:34:53 -     [|
+2020-07-12 15:34:53 -         { FirstName = "Walter"; LastName = "Harp" }
+2020-07-12 15:34:53 -         { FirstName = "Jeff"; LastName = "Smith" }
+2020-07-12 15:34:53 -         { FirstName = "Ben"; LastName = "Smith" }
+2020-07-12 15:34:53 -         { FirstName = ""; LastName = "Holly" }
+2020-07-12 15:34:53 -     |]
+2020-07-12 15:34:53 - records |> Util.Table
+2020-07-12 15:34:53 - Util.Table(records, [| "LastName" |])
+2020-07-12 15:34:53 - "f(x)" |> Util.Math
+2020-07-12 15:34:53 - "\int_0^\infty e^{-x^2} dx \mathrm{\ in\ \LaTeX{}}"
+2020-07-12 15:34:53 -   |> Util.Math
+2020-07-12 15:34:53 - #load "XPlot.Plotly.Paket.fsx"
+2020-07-12 15:34:53 - #load "XPlot.Plotly.fsx"
+2020-07-12 15:34:53 - open XPlot.Plotly
+2020-07-12 15:35:00 - Heatmap(z = [[1; 20; 30]; [20; 1; 60]; [30; 60; 1]])
+2020-07-12 15:35:00 -     |> Chart.Plot
+2020-07-12 15:35:00 -     |> Chart.WithLayout (Layout(title = "Simple Heatmap"))
+2020-07-12 15:35:00 - ["giraffes", 20; "orangutans", 14; "monkeys", 23]
+2020-07-12 15:35:00 -     |> Chart.Bar
+2020-07-12 15:35:00 -     |> Chart.WithLayout (Layout(title = "Basic Bar Chart"))
+2020-07-12 15:35:00 -     |> Chart.WithHeight 300
+2020-07-12 15:35:00 -     |> Chart.WithWidth 400
+2020-07-12 15:35:00 - let html x = { Html = x }
+2020-07-12 15:35:00 -  
+2020-07-12 15:35:00 - html """<div style="background-color: #007fff; font-weight: bold;">Would you like some toast?</div>"""
+2020-07-12 15:35:00 - // Exercise - try video content:
+2020-07-12 15:35:00 - //  <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif" >
+2020-07-12 15:35:00 - //    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+2020-07-12 15:35:00 - //    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+2020-07-12 15:35:00 - //    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
+2020-07-12 15:35:00 - //    Your browser doesn't support HTML5 video tag.
+2020-07-12 15:35:00 - //  </video>"""
+2020-07-12 15:35:00 - "https://github.com/fsharp/fsfoundation/raw/gh-pages/img/logo/fsharp256.png"
+2020-07-12 15:35:00 -   |> Util.Url
+2020-07-12 15:35:06 - open IfSharp.Kernel.App
+2020-07-12 15:35:06 - type Person = 
+2020-07-12 15:35:06 -     { Name: string }
+2020-07-12 15:35:06 - AddDisplayPrinter (fun (person: Person) -> { ContentType = "text/html"; Data = "<b><i>Ahoy " + person.Name + "!</i></b>" })
+2020-07-12 15:35:06 - let samplePerson = { Name = "Walter" }
+2020-07-12 15:35:06 - samplePerson
+2020-07-12 15:35:06 - @"<script src=""https://d3js.org/d3.v3.min.js""></script>" |> Util.Html |> Display
+2020-07-12 15:35:06 - type D3Op = {
+2020-07-12 15:35:06 -     Op: string
+2020-07-12 15:35:06 -     Style: List<string * string>
+2020-07-12 15:35:06 -     Attr: List<string * int>
+2020-07-12 15:35:06 -     On: List<string * List<D3Op>>
+2020-07-12 15:35:06 - }
+2020-07-12 15:35:06 - type D3 = List<D3Op>
+2020-07-12 15:35:06 - let d3op = {Op = ""; Style = []; Attr = []; On = []}
+2020-07-12 15:35:06 - let mapConcat s f xs = 
+2020-07-12 15:35:06 -     xs |> List.map f |> String.concat s
+2020-07-12 15:35:06 - let rec D3OpPrinter (op: D3Op) =
+2020-07-12 15:35:06 -     sprintf 
+2020-07-12 15:35:06 -         "%s%s%s%s"
+2020-07-12 15:35:06 -         (if op.Op.Length > 0 then
+2020-07-12 15:35:06 -             sprintf "\t.append(\"%s\")\n" op.Op
+2020-07-12 15:35:06 -         else
+2020-07-12 15:35:06 -             "")
+2020-07-12 15:35:06 -         (op.Style |> mapConcat "\t" (fun (k, v) -> sprintf ".style(\"%s\", \"%s\")\n" k v ) )
+2020-07-12 15:35:06 -         (op.Attr |> mapConcat "\t" (fun (k, v) -> sprintf ".attr(\"%s\", %d)\n" k v))
+2020-07-12 15:35:06 -         (op.On
+2020-07-12 15:35:06 -             |> mapConcat "\t" (fun (k, v) ->
+2020-07-12 15:35:06 -                 sprintf 
+2020-07-12 15:35:06 -                     ".on(\"%s\",\n\tfunction(){\n\td3.select(this)\n%s\t})\n"
+2020-07-12 15:35:06 -                     k
+2020-07-12 15:35:06 -                     (v |> mapConcat "" D3OpPrinter)
+2020-07-12 15:35:06 -                 ))
+2020-07-12 15:35:06 - let D3Printer (d3: D3) =
+2020-07-12 15:35:06 -     sprintf 
+2020-07-12 15:35:06 -         """
+2020-07-12 15:35:06 - <div id="viz"></div>
+2020-07-12 15:35:06 - <script type="text/javascript">
+2020-07-12 15:35:06 - d3.select("#viz")
+2020-07-12 15:35:06 - %s
+2020-07-12 15:35:06 - """
+2020-07-12 15:35:06 -         (d3 |> mapConcat "" D3OpPrinter)
+2020-07-12 15:35:06 - App.AddDisplayPrinter (fun (d3: D3) ->
+2020-07-12 15:35:06 -   { ContentType = "text/html"
+2020-07-12 15:35:06 -     Data = D3Printer d3 }
+2020-07-12 15:35:06 -   )
+2020-07-12 15:35:06 - [
+2020-07-12 15:35:06 -     {d3op with 
+2020-07-12 15:35:06 -         Op = "svg"
+2020-07-12 15:35:06 -         Attr = [("width", 100); ("height", 100)] }
+2020-07-12 15:35:06 -     {d3op with
+2020-07-12 15:35:06 -         Op = "circle"
+2020-07-12 15:35:06 -         Style = [("stroke", "grey"); ("fill", "white")]
+2020-07-12 15:35:06 -         Attr = [("r", 40); ("cx", 50); ("cy", 50)]
+2020-07-12 15:35:06 -         On = 
+2020-07-12 15:35:06 -           [ ("mouseover", [{d3op with Style = [("fill", "blue")]}])
+2020-07-12 15:35:06 -             ("mouseout", [{d3op with Style = [("fill", "white")]}]) ] }
+2020-07-12 15:35:06 - ]
+2020-07-12 15:37:21 - shutdown request
+2020-07-12 16:18:45 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 16:18:45 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 16:18:45 - For help type #help;;
+2020-07-12 16:18:45 - > val it :
+2020-07-12 16:18:45 -   ResizeArray<System.Type *
+2020-07-12 16:18:45 -               (obj ->
+2020-07-12 16:18:45 -                  seq<string *
+2020-07-12 16:18:45 -                      string> *
+2020-07-12 16:18:45 -                  string)>
+2020-07-12 16:18:45 - = seq []
+2020-07-12 16:18:45 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 16:18:45 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 16:18:45 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 16:19:24 - shutdown request
+2020-07-12 16:19:28 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 16:19:28 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 16:19:28 - For help type #help;;
+2020-07-12 16:19:28 - > val it :
+2020-07-12 16:19:28 -   ResizeArray<System.Type *
+2020-07-12 16:19:28 -               (obj ->
+2020-07-12 16:19:28 -                  seq<string *
+2020-07-12 16:19:28 -                      string> *
+2020-07-12 16:19:28 -                  string)>
+2020-07-12 16:19:28 - = seq []
+2020-07-12 16:19:28 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 16:19:28 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 16:19:28 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 16:19:28 - (12/4 + 5 + 7) * 4 - 18
+2020-07-12 16:19:29 - let sampleNumbers = [ 0 .. 15 ]
+2020-07-12 16:19:29 - sampleNumbers
+2020-07-12 16:19:29 - /// A function to compute a sample curve
+2020-07-12 16:19:29 - let sampleFunction (x:int) = 
+2020-07-12 16:19:29 -     2*x*x - 5*x + 3
+2020-07-12 16:19:29 - sampleFunction 7
+2020-07-12 16:19:29 - sampleFunction (7 + 4)
+2020-07-12 16:19:29 - sampleFunction (int 3.14 + int 2.79)
+2020-07-12 16:19:29 - if 98.0 < 100.0 then 10 else 20
+2020-07-12 16:19:29 - not false && (true || false)
+2020-07-12 16:19:29 - let helloWorld = "Hello" + " " + "world"
+2020-07-12 16:19:29 - helloWorld
+2020-07-12 16:19:29 - let tripleQuoteString = """A triple-quoted string can contain double quotes " anywhere within it."""
+2020-07-12 16:19:29 - tripleQuoteString
+2020-07-12 16:19:29 - (1, "fred", 3.1415)
+2020-07-12 16:19:29 - open System
+2020-07-12 16:19:29 - let fridaysList = 
+2020-07-12 16:19:29 -     [ for month in 1 .. 6 do
+2020-07-12 16:19:29 -         for day in 1 .. DateTime.DaysInMonth(2017, month) do 
+2020-07-12 16:19:29 -           let date = DateTime(2017, month, day)
+2020-07-12 16:19:29 -           if date.DayOfWeek = DayOfWeek.Friday then 
+2020-07-12 16:19:29 -             yield date.ToShortDateString() ]
+2020-07-12 16:19:29 -               
+2020-07-12 16:19:29 - fridaysList              
+2020-07-12 16:19:30 - let lowNumbers = [| 1 .. 200 |]
+2020-07-12 16:19:30 - lowNumbers
+2020-07-12 16:19:30 - sampleNumbers 
+2020-07-12 16:19:30 - |> List.map (fun x -> x*x) 
+2020-07-12 16:19:30 - let sumOfSelectedSquares = 
+2020-07-12 16:19:30 -     sampleNumbers
+2020-07-12 16:19:30 -     |> List.map (fun x -> x*x) 
+2020-07-12 16:19:30 -     |> List.filter (fun x -> x % 3 = 0)
+2020-07-12 16:19:30 -     |> List.sumBy (fun x -> x * x)
+2020-07-12 16:19:30 -     
+2020-07-12 16:19:30 - sumOfSelectedSquares    
+2020-07-12 16:19:30 - lowNumbers.[0 .. 50]
+2020-07-12 16:19:30 - let rnd = System.Random()
+2020-07-12 16:19:30 - let rec randomWalk x =
+2020-07-12 16:19:30 -     seq { yield x
+2020-07-12 16:19:30 -           yield! randomWalk (x + rnd.NextDouble() - 0.5) }
+2020-07-12 16:19:30 - let firstValuesOfRandomWalk = 
+2020-07-12 16:19:30 -     randomWalk 5.0 
+2020-07-12 16:19:30 -     |> Seq.truncate 20
+2020-07-12 16:19:30 -     |> Seq.toList
+2020-07-12 16:19:30 -     
+2020-07-12 16:19:30 - firstValuesOfRandomWalk
+2020-07-12 16:19:30 - type ContactCard = 
+2020-07-12 16:19:30 -     { Name     : string
+2020-07-12 16:19:30 -       Phone    : string
+2020-07-12 16:19:30 -       Verified : bool
+2020-07-12 16:19:30 -       ZipCode : string option}            
+2020-07-12 16:19:30 -       
+2020-07-12 16:19:30 - let sampleCard = { Name = "Alf" ; Phone = "(206) 555-0157" ; Verified = false; ZipCode=Some "90210" }
+2020-07-12 16:19:30 - sampleCard
+2020-07-12 16:19:30 - let showCard (c: ContactCard) = 
+2020-07-12 16:19:30 -     c.Name + " Phone: " + c.Phone + (if not c.Verified then " (unverified)" else "")
+2020-07-12 16:19:30 -     
+2020-07-12 16:19:30 - showCard sampleCard
+2020-07-12 16:19:30 - open Microsoft.FSharp.Data.UnitSystems.SI.UnitNames
+2020-07-12 16:19:30 - let raceLength = 1600.0<meter>
+2020-07-12 16:19:30 - [<Measure>]
+2020-07-12 16:19:30 - type mile =
+2020-07-12 16:19:30 -     /// Conversion factor mile to meter: meter is defined in SI.UnitNames
+2020-07-12 16:19:30 -     static member asMeter = 1609.344<meter/mile>
+2020-07-12 16:19:30 - /// Distance expressed using imperial units
+2020-07-12 16:19:30 - let distanceToWalk  = 500.0<mile>          
+2020-07-12 16:19:30 - // Same distanceusing metric system
+2020-07-12 16:19:30 - let distanceToWalkInMeters = distanceToWalk * mile.asMeter   
+2020-07-12 16:19:30 - (raceLength, distanceToWalk, distanceToWalkInMeters)
+2020-07-12 16:19:30 - let oneBigArray = [| 0 .. 100000 |]
+2020-07-12 16:19:30 - // Do some CPU intensive computation
+2020-07-12 16:19:30 - let rec computeSomeFunction x = 
+2020-07-12 16:19:30 -     if x <= 2 then 1 
+2020-07-12 16:19:30 -     else computeSomeFunction (x - 1) + computeSomeFunction (x - 2)
+2020-07-12 16:19:30 -        
+2020-07-12 16:19:30 - /// Do a parallel map over a large input array
+2020-07-12 16:19:30 - let computeResults() = oneBigArray |> Array.Parallel.map (fun x -> computeSomeFunction (x % 24))
+2020-07-12 16:19:30 - computeResults()
+2020-07-12 16:19:31 - #load "Paket.fsx"
+2020-07-12 16:19:32 - Paket.Package
+2020-07-12 16:19:32 -   [ "MathNet.Numerics"
+2020-07-12 16:19:32 -     "MathNet.Numerics.FSharp"
+2020-07-12 16:19:32 -   ]
+2020-07-12 16:19:37 - #load "Paket.Generated.Refs.fsx"
+2020-07-12 16:19:38 - open MathNet.Numerics.LinearAlgebra
+2020-07-12 16:19:38 - let m = matrix [[ 1.0; 2.0 ]
+2020-07-12 16:19:38 -                 [ 3.0; 4.0 ]]
+2020-07-12 16:19:38 - m.Inverse() 
+2020-07-12 16:19:38 - type MyType = { FirstName: string; LastName: string }
+2020-07-12 16:19:38 - let records = 
+2020-07-12 16:19:38 -     [|
+2020-07-12 16:19:38 -         { FirstName = "Walter"; LastName = "Harp" }
+2020-07-12 16:19:38 -         { FirstName = "Jeff"; LastName = "Smith" }
+2020-07-12 16:19:38 -         { FirstName = "Ben"; LastName = "Smith" }
+2020-07-12 16:19:38 -         { FirstName = ""; LastName = "Holly" }
+2020-07-12 16:19:38 -     |]
+2020-07-12 16:19:38 - records |> Util.Table
+2020-07-12 16:19:38 - Util.Table(records, [| "LastName" |])
+2020-07-12 16:19:38 - "f(x)" |> Util.Math
+2020-07-12 16:19:38 - "\int_0^\infty e^{-x^2} dx \mathrm{\ in\ \LaTeX{}}"
+2020-07-12 16:19:38 -   |> Util.Math
+2020-07-12 16:19:38 - #load "XPlot.Plotly.Paket.fsx"
+2020-07-12 16:19:38 - #load "XPlot.Plotly.fsx"
+2020-07-12 16:19:38 - open XPlot.Plotly
+2020-07-12 16:19:40 - Heatmap(z = [[1; 20; 30]; [20; 1; 60]; [30; 60; 1]])
+2020-07-12 16:19:40 -     |> Chart.Plot
+2020-07-12 16:19:40 -     |> Chart.WithLayout (Layout(title = "Simple Heatmap"))
+2020-07-12 16:19:40 - ["giraffes", 20; "orangutans", 14; "monkeys", 23]
+2020-07-12 16:19:40 -     |> Chart.Bar
+2020-07-12 16:19:40 -     |> Chart.WithLayout (Layout(title = "Basic Bar Chart"))
+2020-07-12 16:19:40 -     |> Chart.WithHeight 300
+2020-07-12 16:19:40 -     |> Chart.WithWidth 400
+2020-07-12 16:19:40 - let html x = { Html = x }
+2020-07-12 16:19:40 -  
+2020-07-12 16:19:40 - html """<div style="background-color: #007fff; font-weight: bold;">Would you like some toast?</div>"""
+2020-07-12 16:19:40 - // Exercise - try video content:
+2020-07-12 16:19:40 - //  <video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif" >
+2020-07-12 16:19:40 - //    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+2020-07-12 16:19:40 - //    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+2020-07-12 16:19:40 - //    <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
+2020-07-12 16:19:40 - //    Your browser doesn't support HTML5 video tag.
+2020-07-12 16:19:40 - //  </video>"""
+2020-07-12 16:19:40 - "https://github.com/fsharp/fsfoundation/raw/gh-pages/img/logo/fsharp256.png"
+2020-07-12 16:19:40 -   |> Util.Url
+2020-07-12 16:19:43 - open IfSharp.Kernel.App
+2020-07-12 16:19:43 - type Person = 
+2020-07-12 16:19:43 -     { Name: string }
+2020-07-12 16:19:43 - AddDisplayPrinter (fun (person: Person) -> { ContentType = "text/html"; Data = "<b><i>Ahoy " + person.Name + "!</i></b>" })
+2020-07-12 16:19:43 - let samplePerson = { Name = "Walter" }
+2020-07-12 16:19:43 - samplePerson
+2020-07-12 16:19:43 - @"<script src=""https://d3js.org/d3.v3.min.js""></script>" |> Util.Html |> Display
+2020-07-12 16:19:43 - type D3Op = {
+2020-07-12 16:19:43 -     Op: string
+2020-07-12 16:19:43 -     Style: List<string * string>
+2020-07-12 16:19:43 -     Attr: List<string * int>
+2020-07-12 16:19:43 -     On: List<string * List<D3Op>>
+2020-07-12 16:19:43 - }
+2020-07-12 16:19:43 - type D3 = List<D3Op>
+2020-07-12 16:19:43 - let d3op = {Op = ""; Style = []; Attr = []; On = []}
+2020-07-12 16:19:43 - let mapConcat s f xs = 
+2020-07-12 16:19:43 -     xs |> List.map f |> String.concat s
+2020-07-12 16:19:43 - let rec D3OpPrinter (op: D3Op) =
+2020-07-12 16:19:43 -     sprintf 
+2020-07-12 16:19:43 -         "%s%s%s%s"
+2020-07-12 16:19:43 -         (if op.Op.Length > 0 then
+2020-07-12 16:19:43 -             sprintf "\t.append(\"%s\")\n" op.Op
+2020-07-12 16:19:43 -         else
+2020-07-12 16:19:43 -             "")
+2020-07-12 16:19:43 -         (op.Style |> mapConcat "\t" (fun (k, v) -> sprintf ".style(\"%s\", \"%s\")\n" k v ) )
+2020-07-12 16:19:43 -         (op.Attr |> mapConcat "\t" (fun (k, v) -> sprintf ".attr(\"%s\", %d)\n" k v))
+2020-07-12 16:19:43 -         (op.On
+2020-07-12 16:19:43 -             |> mapConcat "\t" (fun (k, v) ->
+2020-07-12 16:19:43 -                 sprintf 
+2020-07-12 16:19:43 -                     ".on(\"%s\",\n\tfunction(){\n\td3.select(this)\n%s\t})\n"
+2020-07-12 16:19:43 -                     k
+2020-07-12 16:19:43 -                     (v |> mapConcat "" D3OpPrinter)
+2020-07-12 16:19:43 -                 ))
+2020-07-12 16:19:43 - let D3Printer (d3: D3) =
+2020-07-12 16:19:43 -     sprintf 
+2020-07-12 16:19:43 -         """
+2020-07-12 16:19:43 - <div id="viz"></div>
+2020-07-12 16:19:43 - <script type="text/javascript">
+2020-07-12 16:19:43 - d3.select("#viz")
+2020-07-12 16:19:43 - %s
+2020-07-12 16:19:43 - """
+2020-07-12 16:19:43 -         (d3 |> mapConcat "" D3OpPrinter)
+2020-07-12 16:19:43 - App.AddDisplayPrinter (fun (d3: D3) ->
+2020-07-12 16:19:43 -   { ContentType = "text/html"
+2020-07-12 16:19:43 -     Data = D3Printer d3 }
+2020-07-12 16:19:43 -   )
+2020-07-12 16:19:43 - [
+2020-07-12 16:19:43 -     {d3op with 
+2020-07-12 16:19:43 -         Op = "svg"
+2020-07-12 16:19:43 -         Attr = [("width", 100); ("height", 100)] }
+2020-07-12 16:19:43 -     {d3op with
+2020-07-12 16:19:43 -         Op = "circle"
+2020-07-12 16:19:43 -         Style = [("stroke", "grey"); ("fill", "white")]
+2020-07-12 16:19:43 -         Attr = [("r", 40); ("cx", 50); ("cy", 50)]
+2020-07-12 16:19:43 -         On = 
+2020-07-12 16:19:43 -           [ ("mouseover", [{d3op with Style = [("fill", "blue")]}])
+2020-07-12 16:19:43 -             ("mouseout", [{d3op with Style = [("fill", "white")]}]) ] }
+2020-07-12 16:19:43 - ]
+2020-07-12 16:20:30 - let sampleNumbers = [ 0 .. 15 ]
+2020-07-12 16:20:30 - sampleNumbers
+2020-07-12 16:20:30 - sampleNumbers.Length
+2020-07-12 16:40:23 - shutdown request
