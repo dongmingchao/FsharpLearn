@@ -58,7 +58,7 @@ sampleFunction (int 3.14 + int 2.79)
 
 #!markdown
 
-条件表达式（行内）和bu
+条件表达式（行内）和布尔逻辑符号
 
 #!fsharp
 
