@@ -1,0 +1,15 @@
+#!markdown
+
+# 第一章 基本数据结构
+
+#!markdown
+
+int、boolean、string
+
+#!fsharp
+
+let number: int = 10
+let bool: bool = false
+let str: string = "This is string"
+
+printf "%d, %b, %s" number bool str

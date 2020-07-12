@@ -1,0 +1,251 @@
+2020-07-12 19:59:17 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 19:59:17 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 19:59:17 - For help type #help;;
+2020-07-12 19:59:17 - > val it :
+2020-07-12 19:59:17 -   ResizeArray<System.Type *
+2020-07-12 19:59:17 -               (obj ->
+2020-07-12 19:59:17 -                  seq<string *
+2020-07-12 19:59:17 -                      string> *
+2020-07-12 19:59:17 -                  string)>
+2020-07-12 19:59:17 - = seq []
+2020-07-12 19:59:17 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 19:59:17 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 19:59:17 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:00:24 - let number: int = 10
+2020-07-12 20:00:24 - let bool: bool = false
+2020-07-12 20:00:24 - let str: string = "This is string"
+2020-07-12 20:00:24 - printf "%d, %b, %s" number bool str
+2020-07-12 20:02:11 - let t: tuple = (1, "hello")
+2020-07-12 20:02:11 - The type 'tuple' is not defined.
+2020-07-12 20:03:24 - let t = (1, "hello")
+2020-07-12 20:03:36 - let t = (1, "hello")
+2020-07-12 20:03:36 - printf "%t" t
+2020-07-12 20:03:36 - This expression was expected to have type
+2020-07-12 20:03:36 -     'System.IO.TextWriter -> unit'    
+2020-07-12 20:03:36 - but here has type
+2020-07-12 20:03:36 -     'int * string'    
+2020-07-12 20:04:02 - let t: (int * string) = (1, "hello")
+2020-07-12 20:10:24 - let l1: list = [1; 2;]
+2020-07-12 20:10:24 - The type 'Microsoft.FSharp.Collections.list<_>' expects 1 type argument(s) but is given 0
+2020-07-12 20:10:34 - let l1: List = [1; 2;]
+2020-07-12 20:10:34 - The type 'Microsoft.FSharp.Collections.List<_>' expects 1 type argument(s) but is given 0
+2020-07-12 20:10:54 - let l1 = [1; 2;]
+2020-07-12 20:11:10 - let l1 = [1; 2;]
+2020-07-12 20:11:10 - let l2 = [1; true; "mixed";]
+2020-07-12 20:11:10 - All elements of a list must be of the same type as the first element, which here is 'int'. This element has type 'bool'.
+2020-07-12 20:11:10 - All elements of a list must be of the same type as the first element, which here is 'int'. This element has type 'string'.
+2020-07-12 20:11:47 - let l1: list<int> = [1; 2;]
+2020-07-12 20:12:30 - let l1: list<int> = [1; 2;]
+2020-07-12 20:12:30 - let l2: list<string> = [
+2020-07-12 20:12:30 -     "list can be split"
+2020-07-12 20:12:30 -     "by new line"
+2020-07-12 20:12:30 - ]
+2020-07-12 20:15:26 - let a1: array<int> = [|1; 2;|]
+2020-07-12 20:19:07 - let a1: array<int> = [|1; 2;|]
+2020-07-12 20:19:07 - a1
+2020-07-12 20:19:07 - a1.[0] <- 4
+2020-07-12 20:19:07 - a1
+2020-07-12 20:19:27 - let a1: array<int> = [|1; 2;|]
+2020-07-12 20:19:27 - a1
+2020-07-12 20:19:56 - a1.[0] <- 4
+2020-07-12 20:19:56 - a1
+2020-07-12 20:22:28 - let seq1: seq<int> = seq { 1; 2; }
+2020-07-12 20:23:14 - let seq1: seq<int> = seq { 1; 2; }
+2020-07-12 20:23:14 - seq1.[0]
+2020-07-12 20:23:14 - The field, constructor or member 'Item' is not defined.
+2020-07-12 20:23:34 - let seq1: seq<int> = seq { 1; 2; }
+2020-07-12 20:26:03 - let l1: list<int> = [1; 2;]
+2020-07-12 20:26:03 - let l2: list<string> = [
+2020-07-12 20:26:03 -     "list can be split"
+2020-07-12 20:26:03 -     "by new line"
+2020-07-12 20:26:03 - ]
+2020-07-12 20:26:03 - let l3: bool list = [true; false;]
+2020-07-12 20:27:14 - let l1: list<int> = [1; 2;]
+2020-07-12 20:27:14 - let l2: list<string> = [
+2020-07-12 20:27:14 -     "list can be split"
+2020-07-12 20:27:14 -     "by new line"
+2020-07-12 20:27:14 - ]
+2020-07-12 20:27:14 - let l3: bool list = [true; false;]
+2020-07-12 20:27:14 - let l4: bool() = [true; false;]
+2020-07-12 20:27:14 - Unexpected symbol '(' in binding. Expected '=' or other token.
+2020-07-12 20:27:27 - let l1: list<int> = [1; 2;]
+2020-07-12 20:27:27 - let l2: list<string> = [
+2020-07-12 20:27:27 -     "list can be split"
+2020-07-12 20:27:27 -     "by new line"
+2020-07-12 20:27:27 - ]
+2020-07-12 20:27:27 - let l3: bool list = [true; false;]
+2020-07-12 20:28:10 - let a1: array<int> = [|1; 2;|]
+2020-07-12 20:28:10 - let a2: bool[] = [| true; false; |]
+2020-07-12 20:28:10 - a1
+2020-07-12 20:29:50 - let b: int[,] =  [|[|1; 2; |]; [| 3; 4; |];|]
+2020-07-12 20:29:50 - This expression was expected to have type
+2020-07-12 20:29:50 -     'int [,]'    
+2020-07-12 20:29:50 - but here has type
+2020-07-12 20:29:50 -     ''a []'    
+2020-07-12 20:31:25 - let b: int[,] =  { {1, 2}, {3, 4}}
+2020-07-12 20:31:25 - Invalid record, sequence or computation expression. Sequence expressions should be of the form 'seq { ... }'
+2020-07-12 20:33:51 - let b: int[,] =  [| [|0..3|] ; [|4|] |]
+2020-07-12 20:33:51 - This expression was expected to have type
+2020-07-12 20:33:51 -     'int [,]'    
+2020-07-12 20:33:51 - but here has type
+2020-07-12 20:33:51 -     ''a []'    
+2020-07-12 20:35:30 - let b: int[,] =  array2D [ [|0..3|] ; [|4|] ]
+2020-07-12 20:35:30 - Expression evaluation failed: The arrays have different lengths.
+2020-07-12 20:35:30 - Parameter name: vals
+2020-07-12 20:35:30 - ArgumentExceptionThe arrays have different lengths.
+2020-07-12 20:35:30 - Parameter name: vals
+2020-07-12 20:35:30 -   at Microsoft.FSharp.Core.ExtraTopLevelOperators.array2D$cont@192[?,T] (?[] rowsArr, System.Int32 m, Microsoft.FSharp.Core.Unit unitVar) [0x00101] in <039b17603f7a807e0eeaa652dc64c784>:0 
+2020-07-12 20:35:30 -   at Microsoft.FSharp.Core.ExtraTopLevelOperators.CreateArray2D[?,T] (System.Collections.Generic.IEnumerable`1[T] rows) [0x0002d] in <039b17603f7a807e0eeaa652dc64c784>:0 
+2020-07-12 20:35:30 -   at <StartupCode$FSI_0034>.$FSI_0034.main@ () [0x00047] in <bcf503c305d04422bb050eefce745e9f>:0 
+2020-07-12 20:35:30 -   at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+2020-07-12 20:35:30 -   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6ae2a9bbfe38412a965297a6b0a61fc2>:0 
+2020-07-12 20:35:32 - let b: int[,] =  array2D [ [|0..3|] ; [|4|] ]
+2020-07-12 20:35:32 - Expression evaluation failed: The arrays have different lengths.
+2020-07-12 20:35:32 - Parameter name: vals
+2020-07-12 20:35:32 - ArgumentExceptionThe arrays have different lengths.
+2020-07-12 20:35:32 - Parameter name: vals
+2020-07-12 20:35:32 -   at Microsoft.FSharp.Core.ExtraTopLevelOperators.array2D$cont@192[?,T] (?[] rowsArr, System.Int32 m, Microsoft.FSharp.Core.Unit unitVar) [0x00101] in <039b17603f7a807e0eeaa652dc64c784>:0 
+2020-07-12 20:35:32 -   at Microsoft.FSharp.Core.ExtraTopLevelOperators.CreateArray2D[?,T] (System.Collections.Generic.IEnumerable`1[T] rows) [0x0002d] in <039b17603f7a807e0eeaa652dc64c784>:0 
+2020-07-12 20:35:32 -   at <StartupCode$FSI_0035>.$FSI_0035.main@ () [0x00047] in <bcf503c305d04422bb050eefce745e9f>:0 
+2020-07-12 20:35:32 -   at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+2020-07-12 20:35:32 -   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6ae2a9bbfe38412a965297a6b0a61fc2>:0 
+2020-07-12 20:35:45 - let b: int[,] =  array2D [| [|0..3|] ; [|4|] |]
+2020-07-12 20:35:45 - Expression evaluation failed: The arrays have different lengths.
+2020-07-12 20:35:45 - Parameter name: vals
+2020-07-12 20:35:45 - ArgumentExceptionThe arrays have different lengths.
+2020-07-12 20:35:45 - Parameter name: vals
+2020-07-12 20:35:45 -   at Microsoft.FSharp.Core.ExtraTopLevelOperators.array2D$cont@192[?,T] (?[] rowsArr, System.Int32 m, Microsoft.FSharp.Core.Unit unitVar) [0x00101] in <039b17603f7a807e0eeaa652dc64c784>:0 
+2020-07-12 20:35:45 -   at Microsoft.FSharp.Core.ExtraTopLevelOperators.CreateArray2D[?,T] (System.Collections.Generic.IEnumerable`1[T] rows) [0x0002d] in <039b17603f7a807e0eeaa652dc64c784>:0 
+2020-07-12 20:35:45 -   at <StartupCode$FSI_0036>.$FSI_0036.main@ () [0x0002e] in <bcf503c305d04422bb050eefce745e9f>:0 
+2020-07-12 20:35:45 -   at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+2020-07-12 20:35:45 -   at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <6ae2a9bbfe38412a965297a6b0a61fc2>:0 
+2020-07-12 20:36:11 - let b: int[,] =  array2D [| [|0..3|] ; [|4..7|] |]
+2020-07-12 20:36:20 - let b: int[,] =  array2D [ [|0..3|] ; [|4..7|] ]
+2020-07-12 20:36:20 - b
+2020-07-12 20:40:55 - let mypoint = { X = 1.0; Y = 1.0; Z = -1.0; }
+2020-07-12 20:40:55 - The record label 'X' is not defined.
+2020-07-12 20:43:25 - type Point = { X: float; Y: float; Z: float; }
+2020-07-12 20:43:25 - let mypoint = { X = 1.0; Y = 1.0; Z = -1.0; }
+2020-07-12 20:45:04 - [<Struct>]
+2020-07-12 20:45:04 - type StructPoint = 
+2020-07-12 20:45:04 -     { X: float
+2020-07-12 20:45:04 -       Y: float
+2020-07-12 20:45:04 -       Z: float }
+2020-07-12 20:48:13 - let mypoint2 = { mypoint with Y = 100.0; Z = 2.0 }
+2020-07-12 20:48:13 - mypoint2
+2020-07-12 20:48:47 - shutdown request
+2020-07-12 20:48:51 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 20:48:51 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 20:48:51 - For help type #help;;
+2020-07-12 20:48:51 - > val it :
+2020-07-12 20:48:51 -   ResizeArray<System.Type *
+2020-07-12 20:48:51 -               (obj ->
+2020-07-12 20:48:51 -                  seq<string *
+2020-07-12 20:48:51 -                      string> *
+2020-07-12 20:48:51 -                  string)>
+2020-07-12 20:48:51 - = seq []
+2020-07-12 20:48:51 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:48:51 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 20:48:51 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:48:51 - let number: int = 10
+2020-07-12 20:48:51 - let bool: bool = false
+2020-07-12 20:48:51 - let str: string = "This is string"
+2020-07-12 20:48:51 - printf "%d, %b, %s" number bool str
+2020-07-12 20:48:51 - let t: (int * string) = (1, "hello")
+2020-07-12 20:48:52 - let l1: list<int> = [1; 2;]
+2020-07-12 20:48:52 - let l2: list<string> = [
+2020-07-12 20:48:52 -     "list can be split"
+2020-07-12 20:48:52 -     "by new line"
+2020-07-12 20:48:52 - ]
+2020-07-12 20:48:52 - let l3: bool list = [true; false;]
+2020-07-12 20:48:52 - let a1: array<int> = [|1; 2;|]
+2020-07-12 20:48:52 - let a2: bool[] = [| true; false; |]
+2020-07-12 20:48:52 - a1
+2020-07-12 20:48:52 - let b: int[,] =  array2D [ [|0..3|] ; [|4..7|] ]
+2020-07-12 20:48:52 - b
+2020-07-12 20:48:52 - a1.[0] <- 4
+2020-07-12 20:48:52 - a1
+2020-07-12 20:48:52 - let seq1: seq<int> = seq { 1; 2; }
+2020-07-12 20:48:52 - type Point = { X: float; Y: float; Z: float; }
+2020-07-12 20:48:52 - let mypoint = { X = 1.0; Y = 1.0; Z = -1.0; }
+2020-07-12 20:48:52 - mypoint
+2020-07-12 20:48:52 - [<Struct>]
+2020-07-12 20:48:52 - type StructPoint = 
+2020-07-12 20:48:52 -     { X: float
+2020-07-12 20:48:52 -       Y: float
+2020-07-12 20:48:52 -       Z: float }
+2020-07-12 20:48:52 - let mypoint2 = { mypoint with Y = 100.0; Z = 2.0 }
+2020-07-12 20:48:52 - mypoint2
+2020-07-12 20:50:53 - type Car = 
+2020-07-12 20:50:53 -     { Make : string
+2020-07-12 20:50:53 -       Model : string
+2020-07-12 20:50:53 -       mutable Odometer : int }
+2020-07-12 20:50:53 - let myCar = { Make = "Fabrikam"; Model = "Coupe"; Odometer = 108112 }
+2020-07-12 20:50:53 - myCar.Odometer <- myCar.Odometer + 21
+2020-07-12 20:50:53 - myCar
+2020-07-12 20:57:08 - shutdown request
+2020-07-12 20:57:17 - shutdown request
+2020-07-12 20:58:58 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 20:58:58 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 20:58:58 - For help type #help;;
+2020-07-12 20:58:58 - > val it :
+2020-07-12 20:58:58 -   ResizeArray<System.Type *
+2020-07-12 20:58:58 -               (obj ->
+2020-07-12 20:58:58 -                  seq<string *
+2020-07-12 20:58:58 -                      string> *
+2020-07-12 20:58:58 -                  string)>
+2020-07-12 20:58:58 - = seq []
+2020-07-12 20:58:58 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:58:58 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 20:58:58 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:59:13 - shutdown request
+2020-07-12 20:59:17 - Microsoft (R) F# Interactive version  for F# 
+2020-07-12 20:59:17 - Copyright (c) Microsoft Corporation. All Rights Reserved.
+2020-07-12 20:59:17 - For help type #help;;
+2020-07-12 20:59:17 - > val it :
+2020-07-12 20:59:17 -   ResizeArray<System.Type *
+2020-07-12 20:59:17 -               (obj ->
+2020-07-12 20:59:17 -                  seq<string *
+2020-07-12 20:59:17 -                      string> *
+2020-07-12 20:59:17 -                  string)>
+2020-07-12 20:59:17 - = seq []
+2020-07-12 20:59:17 - --> Referenced '/usr/local/Cellar/mono/6.8.0.123/lib/mono/4.5/Facades/netstandard.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:59:17 - --> Added '/Users/dongmingchao/Downloads/IfSharp.v3.0.4' to library include path
+2020-07-12 20:59:17 - --> Referenced '/Users/dongmingchao/Downloads/IfSharp.v3.0.4/IfSharp.Kernel.dll' (file may be locked by F# Interactive process)
+2020-07-12 20:59:17 - let number: int = 10
+2020-07-12 20:59:17 - let bool: bool = false
+2020-07-12 20:59:17 - let str: string = "This is string"
+2020-07-12 20:59:17 - printf "%d, %b, %s" number bool str
+2020-07-12 20:59:18 - let t: (int * string) = (1, "hello")
+2020-07-12 20:59:18 - let l1: list<int> = [1; 2;]
+2020-07-12 20:59:18 - let l2: list<string> = [
+2020-07-12 20:59:18 -     "list can be split"
+2020-07-12 20:59:18 -     "by new line"
+2020-07-12 20:59:18 - ]
+2020-07-12 20:59:18 - let l3: bool list = [true; false;]
+2020-07-12 20:59:18 - let a1: array<int> = [|1; 2;|]
+2020-07-12 20:59:18 - let a2: bool[] = [| true; false; |]
+2020-07-12 20:59:18 - a1
+2020-07-12 20:59:18 - let b: int[,] =  array2D [ [|0..3|] ; [|4..7|] ]
+2020-07-12 20:59:18 - b
+2020-07-12 20:59:18 - a1.[0] <- 4
+2020-07-12 20:59:18 - a1
+2020-07-12 20:59:18 - let seq1: seq<int> = seq { 1; 2; }
+2020-07-12 20:59:18 - type Point = { X: float; Y: float; Z: float; }
+2020-07-12 20:59:18 - let mypoint = { X = 1.0; Y = 1.0; Z = -1.0; }
+2020-07-12 20:59:18 - mypoint
+2020-07-12 20:59:18 - [<Struct>]
+2020-07-12 20:59:18 - type StructPoint = 
+2020-07-12 20:59:18 -     { X: float
+2020-07-12 20:59:18 -       Y: float
+2020-07-12 20:59:18 -       Z: float }
+2020-07-12 20:59:18 - let mypoint2 = { mypoint with Y = 100.0; Z = 2.0 }
+2020-07-12 20:59:18 - mypoint2
+2020-07-12 20:59:18 - type Car = 
+2020-07-12 20:59:18 -     { Make : string
+2020-07-12 20:59:18 -       Model : string
+2020-07-12 20:59:18 -       mutable Odometer : int }
+2020-07-12 20:59:18 - let myCar = { Make = "Fabrikam"; Model = "Coupe"; Odometer = 108112 }
+2020-07-12 20:59:18 - myCar.Odometer <- myCar.Odometer + 21
+2020-07-12 20:59:18 - myCar
+2020-07-12 20:59:42 - shutdown request
